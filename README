@@ -1,0 +1,41 @@
+TODO for Promisc Tool [v0.2]
+-----------------------------
+
+[*] Main function of the tool
+[*] ARP packet builder
+[*] ICMP packet builder
+[X] Read replies from the wire
+[X] Use pthread to detach the reading from the main program
+[ ] Extensive testing!
+[ ] Publish code on freshmeat
+---
+[X ] Implement IPv6
+
+Items marked with [X] cannot be implemented due to libnet restrictions.
+
+ChangeLog
+---------
+v0.3
+	-> added the build.sh script and cleaned debug
+v0.2b
+	-> project is now made of 2 tools: 
+		a) pt-host : used to test single hosts
+		b) pt-net  : used to test all hosts on 
+			     the subnet belonging to the
+			     net adaptor passed as argument
+
+v0.2a
+	-> added function to build mDNS packets
+
+v0.2
+	-> added function to catch replies using
+	   libpcap
+
+v0.1b
+	-> added function to build ICMP REQ packets
+	-> updated Makefile
+	-> created TODO file
+v0.1a
+	-> added function to build ARP REQ packets
+v0.1
+	-> added main function for the tool
