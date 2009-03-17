@@ -1,11 +1,13 @@
 # Params
 OPTS = -Wall
-LIBS = -lnet
+LIBS = -lnet -lpcap -lpthread
 DEFINES = `libnet-config --defines`
 
 all:
 	gcc main.c \
-		arp.h icmp.h mdns.h \
+		func.h icmp.h \
+		icmp6.h arp.h \
+		read.h \
 		-o pt-host \
 		${OPTS} \
 		${LIBS} \
